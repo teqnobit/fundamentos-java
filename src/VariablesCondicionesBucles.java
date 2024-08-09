@@ -2,7 +2,7 @@ public class VariablesCondicionesBucles {
     
     public static void main(String[] args) {
         
-        // Variables y Constantes
+        // ----- Variables y Constantes -----
         String nombre = "Ariel Tequida";
         int    edad   = 27;
         Double altura = 177.8;
@@ -10,7 +10,14 @@ public class VariablesCondicionesBucles {
         int añoActual = 2024;
         final int AÑONACIMIENTO = 1996;
         
-        // Condicionales
+        // ----- Arreglos -----
+        String[] nombres = {"Ariel", "Angel", "Angie"};
+        int[] numeros = new int[3];
+        numeros[0] = 100;
+        numeros[1] = 200;
+        numeros[2] = 300;
+        
+        // ----- Condicionales -----
         if(edad == 27)
             System.out.println("naciste en el 96");
         
@@ -49,15 +56,15 @@ public class VariablesCondicionesBucles {
                 System.out.println("Hoy no es lunes, ni martes, ni miercoles");
         }
         
-        // Bucles
+        // ----- Bucles -----
         //  inicio ; condicion(true) ; incremento
         for(int i=0;      i<=2       ; i++){
             System.out.println("Cuenta if: " + i);
         }
         
         int i = 0;
-        while(i < 4){
-            System.out.println("Cuenta while: " + i);
+        while(i < numeros.length){
+            System.out.println("Posicion arreglo: " + i + ". Valor almacenado: " + numeros[i]);
             i++;
         }
         
@@ -67,6 +74,10 @@ public class VariablesCondicionesBucles {
             i++;
         }while(i > 4);
         
+        // for each
+        for(String nombreForEach : nombres){
+            System.out.println(nombreForEach);
+        }
         
     }
     
