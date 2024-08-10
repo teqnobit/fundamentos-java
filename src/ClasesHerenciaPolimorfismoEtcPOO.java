@@ -1,16 +1,25 @@
+import paqueteEjemplo.Comida;
+// import Libro;   // Libro no es necesario importarlo ya que al estar dentro del paquete ya se puede acceder a esta clase
+
 public class ClasesHerenciaPolimorfismoEtcPOO {
     
     public static void main(String[] args) {
         // ----- Clases -----
         Animal humano = new Animal();
         humano.hacerSonido();
-        
         Animal caballo = new Animal(true, "Caballo", 4, "Pradera");
         System.out.println("Este animal es un: " + caballo.getEspecie());
         
         Perro kira = new Perro();
         Perro fara = new Perro(true, "Perro", 4, "Ciudad", "Negro");
         // Perro dobby = new Animal(true, "Perro", 5, "Ciudad"); // Asi no se maneja la herencia
+        
+        // clases propias
+        Libro cienaños = new Libro("Cien años de soledad", 600);
+        Comida pizza = new Comida("Pizza", 3200);
+        cienaños.leerLibro();
+        pizza.comerComida();
+        
         
         // ----- Polimorfismo -----
         Animal elefante = new Animal();
